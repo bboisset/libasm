@@ -19,7 +19,7 @@ ret | Use to end end function | ret |
 ### Controle Instruction
 
 In assembly language the only way to make a loop as a while or a for. Is to jump to a label
-```
+```assembly
   .loop
     dec rsi ; decrement value of rsi
     cmp rsi, 0 ; if rsi == 0
