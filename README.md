@@ -41,6 +41,14 @@ JL | Jump if < | JL .start
 JMP | Junp to label without condition | JMP .start
 
 ### Math Operation
-Name | Description | Exemple | Exemple description
+Name | Description | Exemple | C equivalent
 ---- | ----------- | ------- | -------------------
-DEC | Décremente une valeur de 1 | dec rsi | rsi--
+dec | Decrement value by 1 | dec rsi | rsi--;
+inc | Increment value by 1 | inc rsi | rsi++;
+add | Add two values | add rsi, 4 | rsi += 4;
+sub | substrat two values | sub rsi, 4 | rsi -= 4;
+mul | multiplicate two values with unsigned integer | mul rsi, 4 | rsi *= 4;
+imul | multiplicate two values with signed integer | imul rsi, 4 | rsi *= 4;
+div | divide two values with unsigned integer | div rsi, 4 | rsi /= 4;
+idiv | divide two values with signed integer | idiv rsi, 4 | rsi /= 4;
+cmp | compare two values | cmp rsi, 4 |
