@@ -11,4 +11,6 @@ gcc *.c s_file.o -o name_of_program
 
 Name | Description | Exemple | Exemple description
 ---- | ----------- | ------- | -------------------
-rax | use to return value from asm function | mov rax, 42 | the function will return 42
+mov | Use to move value to a register | mov rax, 42 | rax register will get 42 value
+rax | Use to return value from asm function | mov rax, 42 | The function will return 42
+ret | Use to end end function | ret | 
