@@ -39,3 +39,8 @@ JEG | Jump to label if >= | JEG .start
 JNGA | Jump if != OR !> | JNGA .start
 JL | Jump if < | JL .start
 JMP | Junp to label without condition | JMP .start
+
+### Math Operation
+Name | Description | Exemple | Exemple description
+---- | ----------- | ------- | -------------------
+DEC | Décremente une valeur de 1 | dec rsi | rsi--
