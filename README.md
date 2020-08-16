@@ -16,7 +16,7 @@ rax | Use to return value from asm function | mov rax, 42 | The function will re
 rdi | Where first argument of function is saved | 
 ret | Use to end end function | ret | 
 
-*Functions arguments are saves respectively in rdi, rsi, rdx, rcx, r8, r9*
+*The first 6 arguments of a Functions are saved respectively in rdi, rsi, rdx, rcx, r8, r9*
 ### Controle Instruction
 
 In assembly language the only way to make a loop as a while or a for. Is to jump to a label
