@@ -1,8 +1,12 @@
 #include <stdio.h>
+#include <fcntl.h>
 
-int	ft_strlen(char *str);
+void	ft_write(int fd, const void *buf, size_t count);
 
 int main() {
-    printf("test len : %i\n", ft_strlen("test"));
-    return 0;
+	int fd;
+
+	fd = open("./file.txt", O_APPEND | O_RDWR |  O_CREAT);
+   	ft_write(fd, "lol", 3);
+   	return 0;
 }

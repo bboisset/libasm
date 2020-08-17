@@ -1,8 +1,8 @@
 section	.text
-	global	ft_write
+	global	ft_write ; ssize_t 	write(int fd, cont void *buf, size_t count)
 	ft_write:
-		mov	rdi, 1
-		mov	rax, 1
+		mov rax, 1
 		syscall
-		mov	rax, 0
-		ret
+		mov rdi, 0
+		mov	rax, 60
+		syscall
