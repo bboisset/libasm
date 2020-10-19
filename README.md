@@ -1,4 +1,4 @@
-# Libasm
+# Libasm *In Progress*
 
 
 ## How To Compile
@@ -6,13 +6,22 @@
 nasm -f elf64 *.s 
 gcc *.c s_file.o -o name_of_program
 ```
+## Project advancement
+
+Function Name | Code | test
+------------- | ---- | ----
+ft_write.s | :white_check_mark: | :stopwatch:
+ft_strlen.s | :x: | :x:
+ft_strcpy.s | :x: | :x:
+ft_strcmp.s | :x: | :x:
+ft_read.s | :white_check_mark: | :x:
+ft_strdup.s | :x: | :x:
 
 ## Better understand assembly language
 
 Name | Description | Exemple | Exemple description
 ---- | ----------- | ------- | -------------------
 mov | Use to move value to a register | mov rax, 42 | rax register will get 42 value
-movzx | Move value to a register and fill rest with 0 |
 rax | Use to return value from asm function (max 64 bits) | mov rax, 42 | The function will return 42
 rdi | Where first argument of function is saved | 
 ret | Use to end end function | ret | 
@@ -35,7 +44,8 @@ In assembly language the only way to make a loop as a while or a for. Is to jump
 
 Name | Description | Exemple
 ---- | ----------- | -------
-JE | Jump to label if = | JE .start
+JE | Jump to label if == | JE .start
+JNE | Jump to label if != | JNE .start
 JG | Jump to label if > | JG .start
 JEG | Jump to label if >= | JEG .start
 JNGA | Jump if != OR !> | JNGA .start
@@ -54,3 +64,6 @@ imul | multiplicate two values with signed integer | imul rsi, 4 | rsi *= 4;
 div | divide two values with unsigned integer | div rsi, 4 | rsi /= 4;
 idiv | divide two values with signed integer | idiv rsi, 4 | rsi /= 4;
 cmp | compare two values | cmp rsi, 4 |
+
+## Usefull Sources
+[Linux Sycall](https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/)
