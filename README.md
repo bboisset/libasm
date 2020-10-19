@@ -8,14 +8,14 @@ gcc *.c s_file.o -o name_of_program
 ```
 ## Project advancement
 
-Function Name | Code | test
-------------- | ---- | ----
-ft_write.s | :white_check_mark: | :stopwatch:
-ft_strlen.s | :x: | :x:
-ft_strcpy.s | :x: | :x:
-ft_strcmp.s | :x: | :x:
-ft_read.s | :white_check_mark: | :x:
-ft_strdup.s | :x: | :x:
+Function Name | Code | test | unit_test
+------------- | ---- | ---- | ---------
+ft_write.s | :white_check_mark: | :stopwatch: | :x:
+ft_strlen.s | :white_check_mark: | :white_check_mark: | :x:
+ft_strcpy.s | :x: | :x: | :x:
+ft_strcmp.s | :x: | :x: | :x:
+ft_read.s | :white_check_mark: | :x: | :x:
+ft_strdup.s | :x: | :x: | :x:
 
 ## Better understand assembly language
 
