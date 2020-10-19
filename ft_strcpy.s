@@ -1,17 +1,16 @@
 section	.text
 	global	ft_strcpy ; int	strcpy(char* dest, const char *src)
 	ft_strcpy:
-		mov rax, 0
-		mov	rdx, 0
-		mov byte [rdi+rdx], 0
+		xor	rcx, rcx ; i = 0
+		cmp rsi, 0 ; check src not null
+		je .end
 		.loop
-			mov	bl, byte [rsi] ; take value of last byte in the char	
-			;mov byte [rdi+rdx], 0
-			cmp	bl, 0
-			je	.end
-			inc rsi
-			inc rdx
+			mov	dl, BYTE [rsi + rcx] ; take value of first byte in the char	
+			mov BYTE [rdi + rcx], dl ; assign value to rdi
+			cmp	dl, 0
+			jz	.end
+			inc rcx
 			jmp .loop
 		.end
-			mov rax, rdx
+			mov rax, rdi
 			ret
