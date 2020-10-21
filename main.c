@@ -40,23 +40,23 @@ int		check_strcpy()
 	printf("------ FT_STRCPY -----\n");
 	printf("----------------------\n\n");
 	printf("test for ''\n");
-	printf("strcpy : %d\n", strcpy(dest, empty_string));
+	printf("strcpy : %s\n", strcpy(dest, empty_string));
 	clear_dest(dest);
-	printf("ft_strcpy : %d\n", ft_strcpy(dest, empty_string));
+	printf("ft_strcpy : %s\n", ft_strcpy(dest, empty_string));
 	clear_dest(dest);
 	printf("\n");
 
 	printf("test for 'string test'\n");
-	printf("strcpy : %d\n", strcpy(dest, string));
+	printf("strcpy : %s\n", strcpy(dest, string));
 	clear_dest(dest);
-	printf("ft_strcpy : %d\n", ft_strcpy(dest, string));
+	printf("ft_strcpy : %s\n", ft_strcpy(dest, string));
 	clear_dest(dest);
 	printf("\n");
 
 	printf("test for '8dwMCnogfD qd\\nwq2331d' ");
-	printf("strcpy : %d\n", strcpy(dest, random));
+	printf("strcpy : %s\n", strcpy(dest, random));
 	clear_dest(dest);
-	printf("ft_strcpy : %d\n", ft_strcpy(dest, random));
+	printf("ft_strcpy : %s\n", ft_strcpy(dest, random));
 	clear_dest(dest);
 	printf("\n");
 
