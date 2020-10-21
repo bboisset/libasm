@@ -53,7 +53,7 @@ int		check_strcpy()
 	clear_dest(dest);
 	printf("\n");
 
-	printf("test for '8dwMCnogfD qd\\nwq2331d' ");
+	printf("test for '8dwMCnogfD qd\\nwq2331d'\n");
 	printf("strcpy : %s\n", strcpy(dest, random));
 	clear_dest(dest);
 	printf("ft_strcpy : %s\n", ft_strcpy(dest, random));
