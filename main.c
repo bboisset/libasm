@@ -144,9 +144,9 @@ void	check_strdup()
 	char *empty_string = "";
 	char *dest;
 	char *ft_dest;
-	printf("\n----------------------\n");
-	printf("------- FT_READ ------\n");
-	printf("----------------------\n\n");
+	printf("\n-----------------------\n");
+	printf("------- FT_STRDUP ------\n");
+	printf("------------------------\n\n");
 	printf("Duplication of '%s'\n", str);
 	dest =  strdup(str);
 	ft_dest = ft_strdup(str);
