@@ -40,23 +40,23 @@ int		check_strcpy()
 	printf("------ FT_STRCPY -----\n");
 	printf("----------------------\n\n");
 	printf("test for ''\n");
-	printf("strcpy : %s\n", strcpy(dest, empty_string));
+	printf("strcpy : %d\n", strcpy(dest, empty_string));
 	clear_dest(dest);
-	printf("ft_strcpy : %s\n", ft_strcpy(dest, empty_string));
+	printf("ft_strcpy : %d\n", ft_strcpy(dest, empty_string));
 	clear_dest(dest);
 	printf("\n");
 
 	printf("test for 'string test'\n");
-	printf("strcpy : %s\n", strcpy(dest, string_test));
+	printf("strcpy : %d\n", strcpy(dest, string));
 	clear_dest(dest);
-	printf("ft_strcpy : %s\n", ft_strcpy(dest, string_test));
+	printf("ft_strcpy : %d\n", ft_strcpy(dest, string));
 	clear_dest(dest);
 	printf("\n");
 
 	printf("test for '8dwMCnogfD qd\\nwq2331d' ");
-	printf("strcpy : %s\n", strcpy(dest, random));
+	printf("strcpy : %d\n", strcpy(dest, random));
 	clear_dest(dest);
-	printf("ft_strcpy : %s\n", ft_strcpy(dest, random));
+	printf("ft_strcpy : %d\n", ft_strcpy(dest, random));
 	clear_dest(dest);
 	printf("\n");
 
@@ -73,16 +73,16 @@ void	check_strcmp()
 	printf("------ FT_STRCMP -----\n");
 	printf("----------------------\n\n");
 	printf("compare '%s' against '%s'\n", empty_string, str1);
-	printf("strcmp : %s\n", strcmp(empty_string, str1));
-	printf("ft_strcmp : %s\n", ft_strcmp(empty_string, str1));
+	printf("strcmp : %d\n", strcmp(empty_string, str1));
+	printf("ft_strcmp : %d\n", ft_strcmp(empty_string, str1));
 	printf("\n");
 	printf("compare '%s' against '%s'\n", str1, str2);
-	printf("strcmp : %s\n", strcmp(str1, str2));
-	printf("ft_strcmp : %s\n", ft_strcmp(str1, str2));
+	printf("strcmp : %d\n", strcmp(str1, str2));
+	printf("ft_strcmp : %d\n", ft_strcmp(str1, str2));
 	printf("\n");
 	printf("compare '%s' against '%s'\n", str2, str2);
-	printf("strcmp : %s\n", strcmp(str2, str2));
-	printf("ft_strcmp : %s\n", ft_strcmp(str2, str2));
+	printf("strcmp : %d\n", strcmp(str2, str2));
+	printf("ft_strcmp : %d\n", ft_strcmp(str2, str2));
 	printf("\n");
 }
 
