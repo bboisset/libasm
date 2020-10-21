@@ -131,8 +131,8 @@ void	check_read()
 	printf("\n");
 	printf("Read file that doesn't exist \n");
 	fd = open("not_existing", O_RDONLY);
-	printf("read res : %d\n", write(fd, buffer, 10));
-	printf("ft_read res : %d\n", ft_write(fd, buffer, 10));
+	printf("read res : %zd\n", write(fd, buffer, 10));
+	printf("ft_read res : %zd\n", ft_write(fd, buffer, 10));
 	close(fd);
 	printf("\n");
 	free(buffer);
@@ -173,4 +173,5 @@ int main(void)
 	check_write();
 	check_read();
 	check_strdup();
+	return (0);
 }
