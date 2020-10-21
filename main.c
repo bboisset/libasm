@@ -22,10 +22,10 @@ void	check_strlen()
 	printf("ft_strlen : %zu\n", ft_strlen(random));
 }
 
-void	clear_dest(char *dest)
+void	clear_dest(char *dest, len)
 {
 	free(dest);
-	dest = malloc(30 * sizeof(char));
+	dest = malloc(len * sizeof(char));
 }
 
 int		check_strcpy()
@@ -41,23 +41,23 @@ int		check_strcpy()
 	printf("----------------------\n\n");
 	printf("test for ''\n");
 	printf("strcpy : %s\n", strcpy(dest, empty_string));
-	clear_dest(dest);
+	clear_dest(dest, 30);
 	printf("ft_strcpy : %s\n", ft_strcpy(dest, empty_string));
-	clear_dest(dest);
+	clear_dest(dest, 30);
 	printf("\n");
 
 	printf("test for 'string test'\n");
 	printf("strcpy : %s\n", strcpy(dest, string));
-	clear_dest(dest);
+	clear_dest(dest, 30);
 	printf("ft_strcpy : %s\n", ft_strcpy(dest, string));
-	clear_dest(dest);
+	clear_dest(dest, 30);
 	printf("\n");
 
 	printf("test for '8dwMCnogfD qd\\nwq2331d'\n");
 	printf("strcpy : %s\n", strcpy(dest, random));
-	clear_dest(dest);
+	clear_dest(dest, 30);
 	printf("ft_strcpy : %s\n", ft_strcpy(dest, random));
-	clear_dest(dest);
+	clear_dest(dest, 30);
 	printf("\n");
 
 	free(dest);
@@ -108,10 +108,69 @@ void	check_write()
 	printf("write res : %i | ft_write res : %i\n", res1, res2);
 }
 
+void	check_read()
+{
+	int fd;
+	int ret;
+	char *buffer;
+
+	ret = 1;
+	fd = open("libasm.h", O_RDONLY);
+	buffer = malloc(sizeof(char) * 51);
+	printf("\n----------------------\n");
+	printf("------- FT_READ ------\n");
+	printf("----------------------\n\n");
+	printf("Read 50 chars of libasm.h \n");
+	ret = read(fd, buffer, 50);
+	buffer[ret] = '\0';
+	printf("read : %s\n", buffer);
+	clear_dest(buffer, 51);
+	ret = ft_read(fd, buffer, 50);
+	printf("ft_read : %s\n", buffer);
+	close(fd);
+	printf("\n");
+	printf("Read file that doesn't exist \n");
+	fd = open("not_existing", O_RDONLY);
+	prinft("read res : %d\n", write(fd, buffer, 10));
+	prinft("ft_read res : %d\n", ft_write(fd, buffer, 10));
+	close(fd);
+	printf("\n");
+	free(buffer);
+}
+
+void	check_strdup()
+{
+	char *str = "Hello World";
+	char *empty_string = "";
+	char *dest;
+	char *ft_dest;
+	printf("\n----------------------\n");
+	printf("------- FT_READ ------\n");
+	printf("----------------------\n\n");
+	printf("Duplication of '%s'\n", str);
+	dest =  strdup(str);
+	ft_dest = ft_strdup(str);
+	printf("strdup : %s\n", dest);
+	printf("ft_strdup : %s\n", ft_dest);
+	free(dest);
+	free(ft_dest);
+	printf("\n");
+	printf("Duplication of '%s'\n", empty_string);
+	dest =  strdup(empty_string);
+	ft_dest = ft_strdup(empty_string);
+	printf("strdup : %s\n", dest);
+	printf("ft_strdup : %s\n", ft_dest);
+	free(dest);
+	free(ft_dest);
+	printf("\n");
+}
+
 int main(void)
 {
 	check_strlen();
 	check_strcpy();
 	check_strcmp();
 	check_write();
+	check_read();
+	check_strdup();
 }
