@@ -98,7 +98,7 @@ void	check_write()
 	printf("\n---------------------\n");
 	printf("------ FT_WRITE -----\n");
 	printf("---------------------\n\n");
-	printf("two '%s' should appears under this string \n", str1);
+	printf("two Hello World should appears under this string \n");
 	res1 = write(0, str1, 12);
 	res2 = ft_write(0, str1, 12);
 	printf("write res : %i | ft_write res : %i\n", res1, res2);
@@ -113,4 +113,5 @@ int main(void)
 	check_strlen();
 	check_strcpy();
 	check_strcmp();
+	check_write();
 }
