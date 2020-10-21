@@ -104,7 +104,9 @@ void	check_write()
 	printf("write res : %i | ft_write res : %i\n", res1, res2);
 	printf("'Hello World' with size 5\n");
 	res1 = write(0, str1, 5);
+	printf("\n");
 	res2 = ft_write(0, str1, 5);
+	printf("\n");
 	printf("write res : %i | ft_write res : %i\n", res1, res2);
 }
 
