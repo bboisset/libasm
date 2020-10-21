@@ -3,6 +3,9 @@ section	.text
 	ft_write:
 		mov rax, 1
 		syscall
-		mov rdi, 0
-		mov	rax, 60
-		syscall
+		jc exit_error
+		ret
+
+exit_error:
+	mov	rax, -1
+	ret
