@@ -3,4 +3,9 @@ section .text
 	ft_read:
 		mov rax, 0 ; 0 is the value for sycall read
 		syscall ; fd, buff and count are default initalize by call
+		jc	exit_error ; if syscall fail
 		ret
+
+exit_error:
+	mov rax, -1
+	ret

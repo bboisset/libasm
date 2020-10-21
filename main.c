@@ -92,6 +92,7 @@ void	check_write()
 	char *str1 = "Hello World\n";
 	int res1;
 	int res2;
+	int fd;
 
 	res1 = 0;
 	res2 = 0;
@@ -108,6 +109,12 @@ void	check_write()
 	res2 = ft_write(0, str1, 5);
 	printf("\n");
 	printf("write res : %i | ft_write res : %i\n", res1, res2);
+	printf("Write file that doesn't exist \n");
+	fd = open("not_existing", O_RDONLY);
+	printf("read res : %zd\n", write(fd, str1, 10));
+	printf("ft_read res : %zd\n", ft_write(fd, str1, 10));
+	close(fd);
+	printf("\n");
 }
 
 void	check_read()
@@ -135,8 +142,8 @@ void	check_read()
 	printf("\n");
 	printf("Read file that doesn't exist \n");
 	fd = open("not_existing", O_RDONLY);
-	printf("read res : %zd\n", write(fd, buffer, 10));
-	printf("ft_read res : %zd\n", ft_write(fd, buffer, 10));
+	printf("read res : %zd\n", read(fd, buffer, 10));
+	printf("ft_read res : %zd\n", read(fd, buffer, 10));
 	close(fd);
 	printf("\n");
 	free(buffer);
