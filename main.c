@@ -127,6 +127,8 @@ void	check_read()
 	buffer[ret] = '\0';
 	printf("read : %s\n", buffer);
 	clear_dest(buffer, 51);
+	close(fd);
+	fd = open("libasm.h", O_RDONLY);
 	ret = ft_read(fd, buffer, 50);
 	printf("ft_read : %s\n", buffer);
 	close(fd);
