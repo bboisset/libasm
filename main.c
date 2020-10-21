@@ -22,7 +22,7 @@ void	check_strlen()
 	printf("ft_strlen : %zu\n", ft_strlen(random));
 }
 
-void	clear_dest(char *dest, len)
+void	clear_dest(char *dest, int len)
 {
 	free(dest);
 	dest = malloc(len * sizeof(char));
