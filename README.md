@@ -12,10 +12,10 @@ Function Name | Code | test | unit_test
 ------------- | ---- | ---- | ---------
 ft_write.s | :white_check_mark: | :stopwatch: | :x:
 ft_strlen.s | :white_check_mark: | :white_check_mark: | :x:
-ft_strcpy.s | :white_check_mark: | :x: | :x:
-ft_strcmp.s | :x: | :x: | :x:
-ft_read.s | :white_check_mark: | :x: | :x:
-ft_strdup.s | :white_check_mark: | :x: | :x:
+ft_strcpy.s | :white_check_mark: | :white_check_mark: | :x:
+ft_strcmp.s | :x: | :white_check_mark: | :x:
+ft_read.s | :white_check_mark: | :stopwatch: | :x:
+ft_strdup.s | :white_check_mark: | :stopwatch: | :x:
 
 ## Better understand assembly language
 
