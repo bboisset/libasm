@@ -8,12 +8,13 @@ ft_strdup:
 		mov rdx, rdi ; save string in other register
 		call ft_strlen
 		inc rax ; add one for '\0' char
-		mov rax, rdi ; set len to allocate
+		mov rdi, rax ; set len to allocate
 		call malloc ; rax is the argument
 		jz end ; if malloc fail return
-		mov rdi, rax ;
+		mov rdi, rax ; move allocated string to rdi
 		mov rsi, rdx
 		call ft_strcpy
+		ret
 		
 end:
 		ret
