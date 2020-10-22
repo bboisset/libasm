@@ -9,14 +9,14 @@ compare:
 		mov	al, byte [rdi]	; take value of first byte in the char
 		mov	bl, byte [rsi]	; take value of first byte in the char
 		cmp	al, 0 
-		je	.end
+		je	end
 		cmp	bl, 0
-		je	.end
+		je	end
 		cmp	al, bl
-		jne	.end
+		jne	end
 		inc rdi
 		inc rsi
-		jmp loop
+		jmp compare
 end:
 		movzx	rax, al		;
 		movzx	rbx, bl
