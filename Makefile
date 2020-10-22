@@ -22,7 +22,7 @@ clean:
 
 test:	all
 		@echo "\033[32m[Test de la librairie !]"
-		gcc -Wall -Wextra -Werror -I./libasm.h libasm.a main.c -o run_test
+		gcc -Wall -Wextra -Werror main.c libasm.a  -o run_test
 		./run_test
 
 fclean:	clean
