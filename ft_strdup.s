@@ -6,8 +6,8 @@ section .text
 
 ft_strdup:
 		call ft_strlen
-		mov rcx, rdi ; save string in other register
 		inc rax ; add one for '\0' char
+		mov rcx, rdi ; save string in other register
 		mov rdi, rax ; set len to allocate
 		call malloc ; rax is the argument
 		jz end ; if malloc fail return
