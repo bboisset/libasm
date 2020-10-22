@@ -15,6 +15,7 @@ section	.text
 			inc rsi
 			jmp .loop
 		.end
-			sub	al, bl ; substrat rdi by rsi
-			movzx	rax, al ; move content of operand to source and fill rest with 0
+			movzx	rax, al		;
+			movzx	rbx, bl
+			sub		rax, rbx	; save the difference between rax and rbx
 			ret
