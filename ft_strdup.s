@@ -10,7 +10,7 @@ ft_strdup:
 		inc rax ; add one for '\0' char
 		mov rdi, rax ; set len to allocate
 		call malloc ; rax is the argument
-		jz end ; if malloc fail return
+		;jz end ; if malloc fail return
 		mov rdi, rax ; move allocated string to rdi
 		mov rsi, rcx
 		call ft_strcpy
