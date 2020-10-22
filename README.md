@@ -15,7 +15,7 @@ ft_strlen.s | :white_check_mark: | :white_check_mark: | :x:
 ft_strcpy.s | :white_check_mark: | :white_check_mark: | :x:
 ft_strcmp.s | :x: | :white_check_mark: | :x:
 ft_read.s | :white_check_mark: | :stopwatch: | :x:
-ft_strdup.s | :white_check_mark: | :stopwatch: | :x:
+ft_strdup.s | :x: | :stopwatch: | :x:
 
 ## Better understand assembly language
 
