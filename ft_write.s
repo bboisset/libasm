@@ -6,7 +6,7 @@ ft_write:
 		mov rax, 1		; 1 is the value of syscall write
 		syscall
 		jc exit_error	; if syscall return value less than 0
-		mov rax, rdx	; return save count in rax for function return
+		mov rax, rcx	; return save count in rax for function return
 		ret
 
 exit_error:
