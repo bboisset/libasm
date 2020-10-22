@@ -21,7 +21,7 @@ clean:
 	rm -f $(OBJS)
 
 test:	all
-		@echo "\033[32m[Test de la librairie !]"
+		@echo "\033[32m[Test de la librairie !]\e[39m"
 		gcc -Wall -Wextra -Werror main.c libasm.a  -o run_test
 		./run_test
 
