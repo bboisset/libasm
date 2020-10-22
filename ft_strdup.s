@@ -7,12 +7,13 @@ section .text
 ft_strdup:
 		call ft_strlen
 		inc rax ; add one for '\0' char
-		mov rcx, rdi ; save string in other register
+		push rdi ; save string in other register
 		mov rdi, rax ; set len to allocate
 		call malloc ; rax is the argument
 		jz end ; if malloc fail return
+		pop r9
 		mov rdi, rax ; move allocated string to rdi
-		mov rsi, rcx
+		mov rsi, r9
 		call ft_strcpy
 		jmp end
 		
