@@ -4,7 +4,7 @@ section	.text
 		mov rcx, rdx	; save count value in other register
 		mov rax, 1		; 1 is the value of syscall write
 		syscall
-		jc exit_error	; on syscall error jump to exit_error
+		jnz exit_error	; if syscall return value less than 0
 		mov rax, rdx	; return save count in rax for function return
 		ret
 
