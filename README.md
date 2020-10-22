@@ -10,10 +10,10 @@ gcc *.c s_file.o -o name_of_program
 
 Function Name | Code | test | unit_test
 ------------- | ---- | ---- | ---------
-ft_write.s | :white_check_mark: | :stopwatch: | :x:
+ft_write.s | :x: | :stopwatch: | :x:
 ft_strlen.s | :white_check_mark: | :white_check_mark: | :x:
 ft_strcpy.s | :white_check_mark: | :white_check_mark: | :x:
-ft_strcmp.s | :x: | :white_check_mark: | :x:
+ft_strcmp.s | :white_check_mark: | :white_check_mark: | :x:
 ft_read.s | :white_check_mark: | :stopwatch: | :x:
 ft_strdup.s | :x: | :stopwatch: | :x:
 
