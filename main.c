@@ -159,16 +159,16 @@ void	check_strdup()
 	printf("------------------------\n\n");
 	printf("Duplication of '%s'\n", str);
 	dest =  strdup(str);
-	ft_dest = ft_strdup(str);
 	printf("strdup : %s\n", dest);
+	ft_dest = ft_strdup(str);
 	printf("ft_strdup : %s\n", ft_dest);
 	free(dest);
 	free(ft_dest);
 	printf("\n");
 	printf("Duplication of '%s'\n", empty_string);
 	dest =  strdup(empty_string);
-	ft_dest = ft_strdup(empty_string);
 	printf("strdup : %s\n", dest);
+	ft_dest = ft_strdup(empty_string);
 	printf("ft_strdup : %s\n", ft_dest);
 	free(dest);
 	free(ft_dest);
