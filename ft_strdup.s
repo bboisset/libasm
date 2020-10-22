@@ -5,16 +5,16 @@ section .text
 	extern ft_strcpy
 
 ft_strdup:
-		mov rdx, rdi ; save string in other register
 		call ft_strlen
+		mov rcx, rdi ; save string in other register
 		inc rax ; add one for '\0' char
 		mov rdi, rax ; set len to allocate
 		call malloc ; rax is the argument
 		jz end ; if malloc fail return
 		mov rdi, rax ; move allocated string to rdi
-		mov rsi, rdx
+		mov rsi, rcx
 		call ft_strcpy
-		ret
+		jmp end
 		
 end:
 		ret
