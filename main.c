@@ -28,7 +28,7 @@ void	clear_dest(char *dest, int len)
 	dest = malloc(len * sizeof(char));
 }
 
-int		check_strcpy()
+void	check_strcpy()
 {
 	char *dest;
 	char *empty_string = "";
@@ -88,7 +88,6 @@ void	check_strcmp()
 
 void	check_write()
 {
-	char *empty_string = "";
 	char *str1 = "Hello World\n";
 	int res1;
 	int res2;
