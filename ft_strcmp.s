@@ -18,7 +18,7 @@ compare:
 		inc rsi
 		jmp compare
 end:
-		movzx	rax, al		; add 0 to dest
-		movzx	rbx, bl
+		movzx	rax, al		; copy content to dest with 0 extend
+		movzx	rbx, bl		; copy content to dest with 0 extend
 		sub		rax, rbx	; save the difference between rax and rbx
 		ret
