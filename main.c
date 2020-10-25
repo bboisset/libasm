@@ -111,6 +111,8 @@ void	check_write()
 	printf("Write file that doesn't exist \n");
 	fd = open("not_existing", O_RDONLY);
 	printf("read res : %zd\n", write(fd, str1, 10));
+	close(fd);
+	fd = open("not_existing", O_RDONLY);
 	printf("ft_read res : %zd\n", ft_write(fd, str1, 10));
 	close(fd);
 	printf("\n");
