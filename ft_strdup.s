@@ -6,16 +6,13 @@ section .text
 
 ft_strdup:
 		call ft_strlen
-		push rdi ; save string in stack
 		inc rax ; add one for '\0' char
+		push rdi ; save string in stack
 		mov rdi, rax ; set len to allocate
 		call malloc ; rax is the argument
 		;jz end ; if malloc fail return
 		pop r9 ; get back string froms stack
-		mov rdi, rax ; move allocated string to rdi
-		mov rsi, r9
+		mov rdi, rax ; move pointer string to dest arg
+		mov rsi, r9 ; move string in second src arg
 		call ft_strcpy
-		jmp end
-		
-end:
 		ret
