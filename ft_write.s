@@ -4,9 +4,9 @@ section	.text
 ft_write:
 		mov r8, rdx	; save count value in other register
 		mov rax, 1		; 1 is the value of syscall write
-		syscall
-		jc exit_error	; if syscall return value less than 0
-		mov rax, r8	; return save count in rax for function return
+		syscall ; write return length read of -1 if error
+		cmp	rax, 0
+		jl exit_error	; if syscall return value less than 0
 		ret
 
 exit_error:
