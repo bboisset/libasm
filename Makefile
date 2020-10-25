@@ -22,9 +22,9 @@ clean:
 
 test:	all
 		@echo "\033[32m[Test de la librairie !]\e[39m"
-		gcc  main.c libasm.a  -o run_test
+		gcc -Wall -Wextra -Werror main.c libasm.a  -o run_test
 		./run_test
-#-Wall -Wextra -Werror
+
 fclean:	clean
 		rm -f $(NAME)
 		rm -f run_test

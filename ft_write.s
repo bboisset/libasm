@@ -1,5 +1,5 @@
 section	.text
-	global	ft_write ; ssize_t 	write(int fd, cont void *buf, size_t count)
+	global	_ft_write ; ssize_t 	write(int fd, cont void *buf, size_t count)
 
 ft_write:
 		mov r8, rdx	; save count value in other register

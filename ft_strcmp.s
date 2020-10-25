@@ -1,5 +1,5 @@
 section	.text
-	global	ft_strcmp ; int	strcmp(const char* s1, const char *s2)
+	global	_ft_strcmp ; int	strcmp(const char* s1, const char *s2)
 
 ft_strcmp:
 		mov rax, 0

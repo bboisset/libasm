@@ -1,5 +1,5 @@
 section	.text
-	global	ft_strlen
+	global	_ft_strlen
 	
 ft_strlen:
 		mov rcx, -1 ; fix behavior of repne 
