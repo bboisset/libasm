@@ -5,9 +5,9 @@ ft_strlen:
 	mov	rax, 0 ; initalize count at 0
 
 loop_count:
-	cmp	byte [rdi + rax], 0 ; if str[rax] == 0 exit program
+	cmp	BYTE [rdi + rax], 0 ; if str[rax] == 0 exit program
 	je	exit
-	inc	rax ; increment coun
+	inc	rax ; increment count
 	jmp	loop_count
 
 exit:

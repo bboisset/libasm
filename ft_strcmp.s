@@ -18,7 +18,7 @@ compare:
 		inc rsi
 		jmp compare
 end:
-		movzx	rax, al		;
+		movzx	rax, al		; add 0 to dest
 		movzx	rbx, bl
 		sub		rax, rbx	; save the difference between rax and rbx
 		ret
