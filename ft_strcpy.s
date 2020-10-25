@@ -1,5 +1,5 @@
 section	.text
-	global	_ft_strcpy ; int	strcpy(char* dest, const char *src)
+	global	ft_strcpy ; int	strcpy(char* dest, const char *src)
 
 ft_strcpy:
 		xor	rcx, rcx ; i = 0
