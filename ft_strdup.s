@@ -9,7 +9,7 @@ ft_strdup:
 		inc rax ; add one for '\0' char
 		push rdi ; save string in stack
 		mov rdi, rax ; set len to allocate
-		call malloc ; rax is the argument
+		call malloc wrt ..plt ; rax is the argument, wrt ..plt is for fix ELF problem
 		;jz end ; if malloc fail return
 		pop r9 ; get back string froms stack
 		mov rdi, rax ; move pointer string to dest arg
