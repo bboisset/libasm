@@ -2,7 +2,6 @@ section	.text
 	global	ft_write ; ssize_t 	write(int fd, cont void *buf, size_t count)
 
 ft_write:
-		mov r8, rdx	; save count value in other register
 		mov rax, 1		; 1 is the value of syscall write
 		syscall ; write return length read of -1 if error
 		cmp	rax, 0
