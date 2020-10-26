@@ -108,6 +108,11 @@ void	check_write()
 	printf("\n");
 	res2 = ft_write(0, str1, 5);
 	printf("\n");
+	printf("String equal to NULL\n");
+	res1 = write(0, NULL, 5);
+	printf("\n");
+	res2 = ft_write(0, NULL, 5);
+	printf("\n");
 	printf("write res : %i | ft_write res : %i\n", res1, res2);
 	printf("Write file who doesn't exist \n");
 	fd = open("not_existing",  O_WRONLY | O_CREAT);
