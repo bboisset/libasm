@@ -109,12 +109,12 @@ void	check_write()
 	res2 = ft_write(0, str1, 5);
 	printf("\n");
 	printf("write res : %i | ft_write res : %i\n", res1, res2);
-	printf("Write file that doesn't exist \n");
-	fd = open("not_existing", O_RDONLY);
+	printf("Write file who doesn't exist \n");
+	fd = open("not_existing",  O_WRONLY | O_CREAT);
 	printf("read res : %zd\n", write(fd, str1, 10));
 	printf("errno : %d\n", errno);
 	close(fd);
-	fd2 = open("not_existing", O_RDONLY);
+	fd2 = open("not_existing",  O_WRONLY | O_CREAT);
 	printf("ft_read res : %zd\n", ft_write(fd2, str1, 10));
 	printf("errno : %d\n", errno);
 	close(fd2);
@@ -144,7 +144,7 @@ void	check_read()
 	printf("ft_read : %s\n", buffer);
 	close(fd);
 	printf("\n");
-	printf("Read file that doesn't exist \n");
+	printf("Read file who doesn't exist \n");
 	fd = open("not_existing", O_RDONLY);
 	printf("read res : %zd\n", read(fd, buffer, 10));
 	printf("errno : %d\n", errno);
