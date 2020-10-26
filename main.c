@@ -108,20 +108,18 @@ void	check_write()
 	printf("\n");
 	res2 = ft_write(0, str1, 5);
 	printf("\n");
+	printf("write res : %i | ft_write res : %i\n", res1, res2);
 	printf("\nString equal to NULL\n");
 	res1 = write(0, NULL, 5);
 	printf("\n");
 	res2 = ft_write(0, NULL, 5);
 	printf("\n");
-	printf("write res : %i | ft_write res : %i\n", res1, res2);
 	printf("\nWrite file who doesn't exist \n");
 	fd = open("not_existing",  O_WRONLY | O_CREAT);
 	printf("read res : %zd\n", write(fd, str1, 10));
-	printf("errno : %d\n", errno);
 	close(fd);
 	fd2 = open("not_existing",  O_WRONLY | O_CREAT);
 	printf("ft_read res : %zd\n", ft_write(fd2, str1, 10));
-	printf("errno : %d\n", errno);
 	close(fd2);
 	printf("\n");
 }
@@ -152,9 +150,7 @@ void	check_read()
 	printf("Read file who doesn't exist \n");
 	fd = open("not_existing", O_RDONLY);
 	printf("read res : %zd\n", read(fd, buffer, 10));
-	printf("errno : %d\n", errno);
 	printf("ft_read res : %zd\n", ft_read(fd, buffer, 10));
-	printf("errno : %d\n", errno);
 	close(fd);
 	printf("\n");
 	free(buffer);
