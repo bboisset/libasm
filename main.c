@@ -88,10 +88,11 @@ void	check_strcmp()
 
 void	check_write()
 {
-	char *str1 = "Hello World\n";
-	int res1;
-	int res2;
-	int fd;
+	char	*str1 = "Hello World\n";
+	int 	res1;
+	int 	res2;
+	int 	fd;
+	int		fd2;
 
 	res1 = 0;
 	res2 = 0;
@@ -113,10 +114,10 @@ void	check_write()
 	printf("read res : %zd\n", write(fd, str1, 10));
 	printf("errno : %d\n", errno);
 	close(fd);
-	fd = open("not_existing", O_RDONLY);
-	printf("ft_read res : %zd\n", ft_write(fd, str1, 10));
+	fd2 = open("not_existing", O_RDONLY);
+	printf("ft_read res : %zd\n", ft_write(fd2, str1, 10));
 	printf("errno : %d\n", errno);
-	close(fd);
+	close(fd2);
 	printf("\n");
 }
 
