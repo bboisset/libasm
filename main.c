@@ -111,9 +111,11 @@ void	check_write()
 	printf("Write file that doesn't exist \n");
 	fd = open("not_existing", O_RDONLY);
 	printf("read res : %zd\n", write(fd, str1, 10));
+	printf("errorno : %d\n", errno);
 	close(fd);
 	fd = open("not_existing", O_RDONLY);
 	printf("ft_read res : %zd\n", ft_write(fd, str1, 10));
+	printf("errorno : %d\n", errno);
 	close(fd);
 	printf("\n");
 }
@@ -139,12 +141,14 @@ void	check_read()
 	fd = open("libasm.h", O_RDONLY);
 	ret = ft_read(fd, buffer, 50);
 	printf("ft_read : %s\n", buffer);
+	printf("errorno : %d\n", errno);
 	close(fd);
 	printf("\n");
 	printf("Read file that doesn't exist \n");
 	fd = open("not_existing", O_RDONLY);
 	printf("read res : %zd\n", read(fd, buffer, 10));
 	printf("ft_read res : %zd\n", read(fd, buffer, 10));
+	printf("errorno : %d\n", errno);
 	close(fd);
 	printf("\n");
 	free(buffer);
