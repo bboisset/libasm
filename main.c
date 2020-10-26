@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bboisset <bboisset@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/26 15:04:50 by bboisset          #+#    #+#             */
+/*   Updated: 2020/10/26 15:04:52 by bboisset         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libasm.h"
 
 void	check_strlen()
@@ -76,10 +88,12 @@ void	check_strcmp()
 	printf("strcmp : %d\n", strcmp(empty_string, str1));
 	printf("ft_strcmp : %d\n", ft_strcmp(empty_string, str1));
 	printf("\n");
+
 	printf("compare '%s' against '%s'\n", str1, str2);
 	printf("strcmp : %d\n", strcmp(str1, str2));
 	printf("ft_strcmp : %d\n", ft_strcmp(str1, str2));
 	printf("\n");
+	
 	printf("compare '%s' against '%s'\n", str2, str2);
 	printf("strcmp : %d\n", strcmp(str2, str2));
 	printf("ft_strcmp : %d\n", ft_strcmp(str2, str2));
