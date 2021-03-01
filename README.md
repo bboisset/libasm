@@ -24,6 +24,8 @@ Name | Description | Exemple | Exemple description
 mov | Use to move value to a register | mov rax, 42 | rax register will get 42 value
 rax | Use to return value from asm function (max 64 bits) | mov rax, 42 | The function will return 42
 rdi | Where first argument of function is saved | 
+rsi | Where the second argument of function is saved | 
+rdx | Where the third argument of function is saved | 
 ret | Use to end end function | ret | 
 
 *The first 6 arguments of a Functions are saved respectively in rdi, rsi, rdx, rcx, r8, r9*
